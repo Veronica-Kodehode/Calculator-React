@@ -1,5 +1,14 @@
+import Buttons from "./Buttons/Buttons";
+import Test from "./Test/Test";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <p>Sanity check 🤐</p>
+      <Buttons />
+      <Test />
+    </>
+  );
 }
 
 export default App;
