@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Test() {
+function Calculator() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
 
@@ -22,18 +22,36 @@ function Test() {
   return (
     <div className="calculator">
       <input className="input" type="text" value={input} readOnly />
-      <div className="buttons">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "/", "*", "-", ".", "=", "+", "C"].map(
-          (item) => (
-            <button key={item} onClick={() => handleClick(item)}>
-              {item}
-            </button>
-          )
-        )}
-      </div>
       <div className="result">{result}</div>
+      <div className="buttons">
+        {[
+          1,
+          2,
+          3,
+          "/",
+          4,
+          5,
+          6,
+          ,
+          "*",
+          7,
+          8,
+          9,
+          "-",
+          0,
+          ".",
+          "C",
+          "+",
+
+          "=",
+        ].map((item) => (
+          <button key={item} onClick={() => handleClick(item)}>
+            {item}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
 
-export default Test;
+export default Calculator;

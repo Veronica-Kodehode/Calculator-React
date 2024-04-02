@@ -1,12 +1,9 @@
-import Buttons from "./Buttons/Buttons";
-import Test from "./Test/Test";
+import Calculator from "./Calculator";
 
 function App() {
   return (
     <>
-      <p>Sanity check 🤐</p>
-      <Buttons />
-      <Test />
+      <Calculator />
     </>
   );
 }
