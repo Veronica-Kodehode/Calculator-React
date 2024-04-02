@@ -28,21 +28,21 @@ function Calculator() {
           1,
           2,
           3,
-          "/",
+          "+",
           4,
           5,
           6,
-          ,
-          "*",
+          "-",
           7,
           8,
           9,
-          "-",
+          "*",
+
           0,
           ".",
+          "DEL",
+          "/",
           "C",
-          "+",
-
           "=",
         ].map((item) => (
           <button key={item} onClick={() => handleClick(item)}>

@@ -6,7 +6,7 @@
 
 body {
   height: 90vh;
-  background-color: rgb(203, 218, 218);
+  background-color: hsl(222, 26%, 31%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,6 @@ body {
 
 .calculator {
   width: fit-content;
-  border: 5px solid white;
 }
 
 .input {
@@ -23,28 +22,119 @@ body {
   width: 100%;
   padding: 5px;
   border: none;
-  background-color: aliceblue;
-  color: rgb(77, 77, 77);
+  background-color: hsl(224, 36%, 15%);
 }
 
 .result {
-  background-color: aliceblue;
+  background-color: hsl(224, 36%, 15%);
   height: 3rem;
   font-size: 2rem;
   text-align: end;
   width: 100%;
   padding: 5px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 5rem);
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
 }
 
-.buttons > button {
+button {
   font-size: 2rem;
-  outline: none;
-  border: 2px solid white;
+  /* border: none; */
+  margin: 5px;
   padding: 5px;
+  border-radius: 10px;
+  background-color: hsl(30, 25%, 89%);
 }
+
+button:nth-last-child(4) {
+  font-size: 1.2rem;
+}
+
+button:nth-last-child(2) {
+  grid-column: span 2;
+  font-size: 1.5rem;
+}
+
+button:last-child {
+  grid-column: span 2;
+  background-color: hsl(6, 63%, 50%);
+}
+
+button:hover {
+  background-color: rgb(110, 124, 135);
+  opacity: 0.7;
+}
+
+/* ----------------------------- */
+
+/* .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+} */
+
+/* .calculator {
+  width: 300px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+.input,
+.result {
+  width: calc(100% - 40px);
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: end;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:last-child {
+  grid-column: span 4;
+}
+
+
+
+/* ---------------- */
+
+/* button:nth-child(7) {
+  grid-column: span 2;
+} */
