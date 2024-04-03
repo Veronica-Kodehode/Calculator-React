@@ -11,9 +11,13 @@ function Calculator() {
       } catch (error) {
         setResult("Error");
       }
+    } else if (value === "DEL") {
+      setInput(input.slice(0, -1));
     } else if (value === "C") {
       setInput("");
       setResult("");
+    } else if (value === "." && input.includes(".")) {
+      return;
     } else {
       setInput(input + value);
     }
@@ -37,7 +41,6 @@ function Calculator() {
           8,
           9,
           "*",
-
           0,
           ".",
           "DEL",
