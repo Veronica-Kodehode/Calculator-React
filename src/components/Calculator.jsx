@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import InputField from "./InputField";
+import ResultDisplay from "./ResultDisplay";
+import Button from "./Button";
+import styles from "/src/styles/Calculator.module.css";
 
 function Calculator() {
   const [input, setInput] = useState("");
@@ -24,10 +28,10 @@ function Calculator() {
   };
 
   return (
-    <div className="calculator">
-      <input className="input" type="text" value={input} readOnly />
-      <div className="result">{result}</div>
-      <div className="buttons">
+    <div className={styles.calculator}>
+      <InputField value={input} />
+      <ResultDisplay result={result} />
+      <div className={styles.buttons}>
         {[
           1,
           2,
@@ -48,9 +52,7 @@ function Calculator() {
           "C",
           "=",
         ].map((item) => (
-          <button key={item} onClick={() => handleClick(item)}>
-            {item}
-          </button>
+          <Button key={item} value={item} onClick={() => handleClick(item)} />
         ))}
       </div>
     </div>
