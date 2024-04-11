@@ -1,5 +1,3 @@
-import React from "react";
-
 function InputField({ value }) {
   return <input className="input" type="text" value={value} readOnly />;
 }
